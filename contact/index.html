@@ -31,10 +31,25 @@
       		$(this).html('');
    		 });
   	   }
-	  if (window.location.search.indexOf('sent=1') !== -1) {
-	    $('#formSuccess').show();
-	    $('#contactForm').hide();
-	  }
+	  $('#contactForm').on('submit', function(e) {
+	    e.preventDefault();
+	    var form = this;
+	    fetch(form.action, {
+	      method: 'POST',
+	      body: new FormData(form),
+	      headers: { 'Accept': 'application/json' }
+	    }).then(function(response) {
+	      if (response.ok) {
+	        $('#formError').hide();
+	        $('#formSuccess').show();
+	        form.reset();
+	      } else {
+	        $('#formError').show();
+	      }
+	    }).catch(function() {
+	      $('#formError').show();
+	    });
+	  });
 	 });
 </script>
 <style>
@@ -83,6 +98,15 @@ input, textarea {
 	margin-bottom: 12px;
 	max-width: 300px;
 }
+#formError {
+	display: none;
+	border: 1px solid #a66;
+	background: #ffeaea;
+	color: #234;
+	padding: 12px;
+	margin-bottom: 12px;
+	max-width: 300px;
+}
 </style><script type="text/javascript">
   function movecrabtomenu(itemnum) {
     if (itemnum == 6) {
@@ -114,8 +138,8 @@ input, textarea {
   <div id="mainContent">
     <h1 class="img">Contact Me</h1>
     <div id="formSuccess">Thanks for your message &mdash; I'll get back to you soon!</div>
+    <div id="formError">Sorry, something went wrong sending your message. Please try again, or email loz@lozbecause.com directly.</div>
     <form id="contactForm" action="https://formspree.io/f/xeaqbnvd" method="POST">
-    <input type="hidden" name="_next" value="/contact/?sent=1" />
     <ul id="contactlist">
     	<li id="phone"><span class="noimages">Phone: </span>
        	  <img src="/public/images/phoneNumber.gif" alt="Phone: 073453 3452143" width="145" height="17" />        </li>

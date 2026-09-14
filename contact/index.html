@@ -31,6 +31,10 @@
       		$(this).html('');
    		 });
   	   }
+	  if (window.location.search.indexOf('sent=1') !== -1) {
+	    $('#formSuccess').show();
+	    $('#contactForm').hide();
+	  }
 	 });
 </script>
 <style>
@@ -70,6 +74,15 @@ input, textarea {
 	border: solid #666 1px;
 	padding: 9px;
 }
+#formSuccess {
+	display: none;
+	border: 1px solid #6a6;
+	background: #eaffea;
+	color: #234;
+	padding: 12px;
+	margin-bottom: 12px;
+	max-width: 300px;
+}
 </style><script type="text/javascript">
   function movecrabtomenu(itemnum) {
     if (itemnum == 6) {
@@ -100,7 +113,9 @@ input, textarea {
   </div>
   <div id="mainContent">
     <h1 class="img">Contact Me</h1>
-    <form action="https://formspree.io/f/xeaqbnvd" method="POST">
+    <div id="formSuccess">Thanks for your message &mdash; I'll get back to you soon!</div>
+    <form id="contactForm" action="https://formspree.io/f/xeaqbnvd" method="POST">
+    <input type="hidden" name="_next" value="/contact/?sent=1" />
     <ul id="contactlist">
     	<li id="phone"><span class="noimages">Phone: </span>
        	  <img src="/public/images/phoneNumber.gif" alt="Phone: 073453 3452143" width="145" height="17" />        </li>

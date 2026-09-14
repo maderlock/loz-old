@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Loz Because - Circus Street Artist, Hula-hoopist, and Mistress of Ceremonies (MC)" >
+<meta name="keywords" content="circus, street artist, hula-hoop, mc, compere" >
+<link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
+<title>Loz Because - Hoop</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
+<link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="/public/themes/jquery/flowplayer-3.2.6.min.js"></script>
+<link href="/public/themes/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="/public/themes/css/oneColFixCtr.css" rel="stylesheet" type="text/css" />
+<link href="/public/themes/css/screen.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/public/themes/jquery/normalPageScripts.js" ></script>
+<link href="/public/themes/css/shows.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function togglehidden(el) {
+  if ($(el).html() == 'more...') {
+    $(el).html('less...');
+    $('.inithidden', $(el).parent()).first().slideDown();
+  } else {
+    $('.inithidden', $(el).parent()).first().slideUp();
+    $(el).html('more...');
+  }
+  return false;
+}
+$(document).ready(function() {
+	
+	// install flowplayer and initialize mouse interactivity
+	$("div.player").flowplayer("http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf").hover(function() {
+			
+		// find div.info element inside the player container and show it
+		$("div.info", this).fadeTo("slow", 0.7);
+		
+	}, function() {
+		
+		// when mouse is removed - hide the info
+		$("div.info", this).fadeTo("slow", 0);
+	}); 
+	
+	// initially all info elements are hidden
+	$("div.info").css("opacity", 0);
+
+        $( "#tabs" ).tabs();
+});
+</script><script type="text/javascript">
+  function movecrabtomenu(itemnum) {
+    if (itemnum == 6) {
+       itemnum = 20; // Force off the goddamn screen!
+    }
+    $("#crabWhole").animate().animate({left:(94 * itemnum + 40) + "px"},500);
+  }
+  $(function() {
+    $("#crabWhole").animate({top:"-30px",left:"200px"},500)
+    .animate({left:"+300px"},500);
+  });
+</script>
+</head>
+
+<body class="oneColFixCtr">
+
+<div id="container">
+<div id="container2">
+<div id="crabWhole" style="width:99px; position: relative; top:0px; left: 0px; z-index: 5"><img src="/public/images/crab.png" id="crab1" style="display:hidden; position: relative; left: 0px; top: 0px;" /></div>
+  <a href="/" style="z-index: 70"><img src="/public/themes/css/images/title corner opt.png" width="296" height="386" id="homeimage" /></a>
+  <div id="rotate1">
+  <a href="/">
+    <img src="/public/themes/css/images/rotate2.png" width="240" height="240" class="active" />
+    <img src="/public/themes/css/images/rotate3.jpg" width="240" height="240" />  </a>  </div>
+  <div id="topnav">
+    <ul>
+      <li><a href="/"  onmouseover="movecrabtomenu(1)">Home Page</a></li><li class="current"><a href="/shows"  onmouseover="movecrabtomenu(2)">Shows</a><ul><li class="current"><a href="/shows/hoop" >Hoop</a></li><li><a href="/shows/street" >Street Show</a></li><li><a href="/shows/compere" >Compère</a></li><li><a href="/shows/fire" >Fire</a></li></ul></li><li><a href="/about"  onmouseover="movecrabtomenu(3)">About</a></li><li><a href="/videos"  onmouseover="movecrabtomenu(4)">Videos</a></li><li><a href="/faqs"  onmouseover="movecrabtomenu(5)">FAQs</a></li><li><a href="/contact"  onmouseover="movecrabtomenu(6)">Contact Me</a></li>    </ul>
+  </div>
+  <div id="mainContent">
+    <h1 class="img">Hoop</h1>
+    <div id="tabs">
+  <ul>
+  <li><a href="#lindy">Lindy Hoop</a></li>
+    <li><a href="#contemp">Contemporary Hoop</a></li>
+    <li><a href="#glow">Glow LED</a></li>
+    <li><a href="#comedy">Comedy Caberet</a></li>
+  </ul>
+
+<div id="lindy" class="standalone">
+    <img src="/public/images/190401_hlindy_hoop_websize2.jpg" alt="Loz's leg" title="Lindy hoop looking fabulous" width="200" height="200" class="circle right" />
+    <h2>Lindy Hoop</h2>
+   <h3>(5 mins stage routine)</h3>
+
+<p>Lindy Hoop is a high energy, fun and stylish piece to a specially mixed Electro-Swing track. Optional use of LED glowhoops.
+Choreographed with authentic swing dance moves from world-class dancers in Melbourne, Australia.</p>
+
+<p>Lindy-hoppin', jaw-droppin', eyeball-poppin', earlobe-loppin', caption-stoppin'</p>
+
+   <div class="frontquote">
+<blockquote style="margin-top: 20px"><div class="openquotes"></div>Loz’s act was a huge hit with the audience combining great hooping skills with a huge amount of charisma!<div class="closequotes"></div></blockquote>
+<div class="quotecaption" style="margin-bottom:10px">Julian Bracey, Cirque Bijou</div>
+   <iframe width="540" height="304" src="//www.youtube.com/embed/qZxEjemvyyM?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+</div>
+
+</div>
+
+<div id="contemp" class="standalone">
+    <img src="/public/images/new4split.jpg" alt="Loz's leg" title="The hoops stay there due to industrial glue" width="200" height="200" class="circle right" />
+    <h2>Contemporary Hoop - It's hard having fun</h2>
+    <h3>5 mins 20s stage routine</h3>
+    <p>Loz has an elegant, smooth hooping style. This piece combines innovative hulahooping with Loz’s contemporary dance training. It was featured in the UK Circus Competition, Circus Maximus. Hosted by Udderbelly Productions and Circus Space.</p>
+<div class="frontquote">
+<blockquote style="margin-top: 20px"><div class="openquotes"></div>Loz was fantastic! A crowd-pleaser as usual.<div class="closequotes"></div></blockquote>
+<div class="quotecaption" style="margin-bottom:10px">Annabelle Holland, The Social Club Cabaret</div>
+</div>
+    <iframe width="540" height="304" src="//www.youtube.com/embed/c_LXjw_kHaM?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+</div>
+
+
+
+<div id="glow" class="standalone">
+    <img src="/public/images/190401_hglow_digicircle.jpg" alt="Loz's leg" title="Loz will light up the room!" width="200" height="200" class="circle right" />
+    <h2>Glow hoops - LED hoops</h3>
+    <p>Loz Because's LED hulahooping is beautiful, astonishing, and captivating. Loz is a trained dancer and brilliant hulahooper. Her eye-catching glowing hoops, dazzling costumes and exciting choreography never fail to delight audiences world-wide.</p>
+    <p>Loz performed her glowhooping at the Amman festival in Jordan for 40 000 people – she got a bigger cheer than the pop stars!</p>
+<div class="frontquote">
+<blockquote style="margin-top: 20px"><div class="openquotes"></div>Wow! Loz was spot-on once again! She really has that certain something on stage - you can't take your eyes off her!" <div class="closequotes"></div></blockquote>
+<div class="quotecaption" style="margin-bottom:10px">Flaming Fun Entertainment Agency</div>
+</div>
+   <iframe width="540" height="304" src="//www.youtube.com/embed/aAfxugXn0Io?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div id="comedy" class="standalone">
+    <img src="/public/images/circle%20jumping.jpg" alt="Loz's leg" title="&quot;Thankyou fans. I would high-five you, but I don 't want to touch you.&quot;" width="200" height="200" class="circle right" />
+    <h2>Comedy Caberet - B'Coz</h2>
+    <h3>5 -15 mins stage routine</h3>
+    <p>Loz B'Coz is a (minor) celebrity in her small Bristol neighbourhood. With deluded ideas of self-grandeur, she is the figurehead for the &quot;Bristol Hoop Massive&quot;. </p>
+<div class="frontquote">
+<blockquote style="margin-top: 20px"><div class="openquotes"></div>Loz smashed it tonight! She had the audience laughing and cheering from the moment she entered the stage - great performance! She was also utterly polite and professional offstage too. I noted she was very accommodating and easy to work with.” " <div class="closequotes"></div></blockquote>
+<div class="quotecaption" style="margin-bottom:10px">AJ James, Evening of Burlesque, Bristol Hippodrome</div>
+</div>
+    <p>HILARIOUS caberet stage piece. Comic monologue, interaction with the audience, skillful comedy hulahooping.
+Character is a hip-hop hoop dancing idiot with a hulahoop or 4. She does hoop. Hoops are in it.
+Audience participation <del>optional</del> MANDATORY.
+</p>
+<img src="/public/images/12. Handstand1.jpg" style="
+    float: left;
+    width: 262px;
+    padding-right: 10px;" />
+<img src="/public/images/7. foursplit.jpg" style="
+    float: left;
+    width: 262px;" />
+        <div class="clear"></div>
+
+    </div>
+
+</div>    </div>
+</div>
+</div>
+</body>
+</html>

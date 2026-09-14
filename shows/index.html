@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Circus Street Artist, Hula-hoopist, and Mistress of Ceremonies (MC" >
+<meta name="keywords" content="circus, street artist, hula-hoop, mc, compere" >
+<link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
+<title>Loz Because - Shows</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
+<link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="/public/themes/jquery/flowplayer-3.2.6.min.js"></script>
+<link href="/public/themes/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="/public/themes/css/oneColFixCtr.css" rel="stylesheet" type="text/css" />
+<link href="/public/themes/css/screen.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/public/themes/jquery/normalPageScripts.js" ></script>
+<link href="/public/themes/css/shows.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/public/themes/jquery/flowplayer-3.2.6.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	
+	// install flowplayer and initialize mouse interactivity
+	$("div.player").flowplayer("http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf").hover(function() {
+			
+		// find div.info element inside the player container and show it
+		$("div.info", this).fadeTo("slow", 0.7);
+		
+	}, function() {
+		
+		// when mouse is removed - hide the info
+		$("div.info", this).fadeTo("slow", 0);
+	}); 
+	
+	// initially all info elements are hidden
+	$("div.info").css("opacity", 0);
+		
+});
+</script>
+<style>
+  .foursquare {
+    float: left;
+    width: 275px;
+  }
+  .hoopblock {
+    text-align: center;
+  }
+  .hoopblock a, .hoopblock a:link, .hoopblock a:visited {
+    color: #003;
+    text-decoration: none;
+  }
+  .hoopblock a:hover {
+    color: #00a;
+  } 
+  .hoopblock h2 {
+    margin-bottom: 6px;
+    padding-top: 6px;
+    font-size: 150%;
+}
+</style><script type="text/javascript">
+  function movecrabtomenu(itemnum) {
+    if (itemnum == 6) {
+       itemnum = 20; // Force off the goddamn screen!
+    }
+    $("#crabWhole").animate().animate({left:(94 * itemnum + 40) + "px"},500);
+  }
+  $(function() {
+    $("#crabWhole").animate({top:"-30px",left:"200px"},500)
+    .animate({left:"+300px"},500);
+  });
+</script>
+</head>
+
+<body class="oneColFixCtr">
+
+<div id="container">
+<div id="container2">
+<div id="crabWhole" style="width:99px; position: relative; top:0px; left: 0px; z-index: 5"><img src="/public/images/crab.png" id="crab1" style="display:hidden; position: relative; left: 0px; top: 0px;" /></div>
+  <a href="/" style="z-index: 70"><img src="/public/themes/css/images/title corner opt.png" width="296" height="386" id="homeimage" /></a>
+  <div id="rotate1">
+  <a href="/">
+    <img src="/public/themes/css/images/rotate2.png" width="240" height="240" class="active" />
+    <img src="/public/themes/css/images/rotate3.jpg" width="240" height="240" />  </a>  </div>
+  <div id="topnav">
+    <ul>
+      <li><a href="/"  onmouseover="movecrabtomenu(1)">Home Page</a></li><li class="current"><a href="/shows"  onmouseover="movecrabtomenu(2)">Shows</a><ul><li><a href="/shows/hoop" >Hoop</a></li><li><a href="/shows/street" >Street Show</a></li><li><a href="/shows/compere" >Compère</a></li><li><a href="/shows/fire" >Fire</a></li></ul></li><li><a href="/about"  onmouseover="movecrabtomenu(3)">About</a></li><li><a href="/videos"  onmouseover="movecrabtomenu(4)">Videos</a></li><li><a href="/faqs"  onmouseover="movecrabtomenu(5)">FAQs</a></li><li><a href="/contact"  onmouseover="movecrabtomenu(6)">Contact Me</a></li>    </ul>
+  </div>
+  <div id="mainContent">
+    <h1 class="img">Shows</h1>
+    <div>
+    <p>Loz does many shows. Here are some of the ones that she does that are shows. Shows. Did I mention these are shows? Here are the shows:</p>
+    </div>
+<div class="foursquare"><div class="hoopblock"><a href="/shows/hoop"><h2>Hoop</h2><img src="/public/images/140112_hhoop_circle2.jpg" title="" alt="Loz's leg" width="200" height="200" class="circle" /></a>
+</div></div>
+<div class="foursquare"><div class="hoopblock"><a href="/shows/street"><h2>Street Show</h2><img src="/public/images/140211_hstreet_circle.jpg" alt="SL10" title="" width="200" height="200" class="circle" /></a>
+</div></div>
+<div class="foursquare"><div class="hoopblock"><a href="/shows/compere"><h2>Comp&egrave;ring</h2><img src="/public/images/140112_hcompere2.jpg" alt="Loz Compering" title="" width="200" height="200" class="circle" /></a>
+</div></div>
+<div class="foursquare"><div class="hoopblock"><a href="/shows/fire"><h2>Fire</h2><img src="/public/images/140211_hfire_circle.jpg" title="" alt="Loz's leg" width="200" height="200" class="circle" /></a>
+</div></div>
+</div>
+</div>
+        </div>
+</div>
+</div>
+</body>
+</html>

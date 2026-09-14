@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Loz Because - Circus Street Artist, Hula-hoopist, and Mistress of Ceremonies (MC)" >
+<meta name="keywords" content="circus, street artist, hula-hoop, mc, compere" >
+<link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
+<title>Loz Because - Compère</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
+<link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="/public/themes/jquery/flowplayer-3.2.6.min.js"></script>
+<link href="/public/themes/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="/public/themes/css/oneColFixCtr.css" rel="stylesheet" type="text/css" />
+<link href="/public/themes/css/screen.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/public/themes/jquery/normalPageScripts.js" ></script>
+<link href="/public/themes/css/shows.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/public/themes/jquery/flowplayer-3.2.6.min.js"></script>
+<script type="text/javascript">
+function togglehidden(el) {
+  if ($(el).html() == 'more...') {
+    $(el).html('less...');
+    $('.inithidden', $(el).parent()).first().slideDown();
+  } else {
+    $('.inithidden', $(el).parent()).first().slideUp();
+    $(el).html('more...');
+  }
+  return false;
+}
+$(function() {
+	
+	// install flowplayer and initialize mouse interactivity
+	$("div.player").flowplayer("http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf").hover(function() {
+			
+		// find div.info element inside the player container and show it
+		$("div.info", this).fadeTo("slow", 0.7);
+		
+	}, function() {
+		
+		// when mouse is removed - hide the info
+		$("div.info", this).fadeTo("slow", 0);
+	}); 
+	
+	// initially all info elements are hidden
+	$("div.info").css("opacity", 0);
+		
+});
+</script><script type="text/javascript">
+  function movecrabtomenu(itemnum) {
+    if (itemnum == 6) {
+       itemnum = 20; // Force off the goddamn screen!
+    }
+    $("#crabWhole").animate().animate({left:(94 * itemnum + 40) + "px"},500);
+  }
+  $(function() {
+    $("#crabWhole").animate({top:"-30px",left:"200px"},500)
+    .animate({left:"+300px"},500);
+  });
+</script>
+</head>
+
+<body class="oneColFixCtr">
+
+<div id="container">
+<div id="container2">
+<div id="crabWhole" style="width:99px; position: relative; top:0px; left: 0px; z-index: 5"><img src="/public/images/crab.png" id="crab1" style="display:hidden; position: relative; left: 0px; top: 0px;" /></div>
+  <a href="/" style="z-index: 70"><img src="/public/themes/css/images/title corner opt.png" width="296" height="386" id="homeimage" /></a>
+  <div id="rotate1">
+  <a href="/">
+    <img src="/public/themes/css/images/rotate2.png" width="240" height="240" class="active" />
+    <img src="/public/themes/css/images/rotate3.jpg" width="240" height="240" />  </a>  </div>
+  <div id="topnav">
+    <ul>
+      <li><a href="/"  onmouseover="movecrabtomenu(1)">Home Page</a></li><li class="current"><a href="/shows"  onmouseover="movecrabtomenu(2)">Shows</a><ul><li><a href="/shows/hoop" >Hoop</a></li><li><a href="/shows/street" >Street Show</a></li><li class="current"><a href="/shows/compere" >Compère</a></li><li><a href="/shows/fire" >Fire</a></li></ul></li><li><a href="/about"  onmouseover="movecrabtomenu(3)">About</a></li><li><a href="/videos"  onmouseover="movecrabtomenu(4)">Videos</a></li><li><a href="/faqs"  onmouseover="movecrabtomenu(5)">FAQs</a></li><li><a href="/contact"  onmouseover="movecrabtomenu(6)">Contact Me</a></li>    </ul>
+  </div>
+  <div id="mainContent">
+    <h1 class="img">Compère</h1>
+    <img src="/public/images/140212_hcompere4.jpg" alt="Loz Compèring" title="Loz compèred her own photoshoot, it was exhausting for everyone involved." width="200" height="200" class="circle right" />
+    <p>Mistress of Ceremonies, Loz Because brings her quirky, captivating style to host any event. Loz has compèred circus cabarets, festival stages, educational events and sporting celebrations.</p>
+<p>Her experience in improvised comedy, clowning and plethora of material make her highly versatile for any sort of show.</p>
+<p>Loz was compère on the Olympic Torch Relay 2012.</p>
+<div>
+<a href="#" onClick="togglehidden(this);return false;">more...</a>
+<p class="inithidden">
+<img src="/public/images/140212_olympics.jpg" alt="Loz Compering" title="Loz interviewing a torch bearer on the 2012 Olympic Torch Relay" width="200" height="200" class="circle right" />
+Loz was presenter for the circus segment of the Olympic Torch Relay show, which took place in a different town every evening of the 70 day, UK-wide event – as the Olympic Flame made its way to the Stadium in London 2012. The compèring tasks also included interviews with sporting celebrities, warming up crowds, and improvised entertaining on street-level or from the touring buses.
+</p>
+</div>
+</p>
+<div class="clearboth"></div>
+    <blockquote>Her incredible skill and endless witty banter had everyone enthralled. Simply stunning.</blockquote>
+    <div class="quotecaption">Simon Chainey, Festival Stage Booker.</div>
+    <iframe width="560" height="315" src="//www.youtube.com/embed/TJmSCOR8C0U?rel=0" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+</div>
+</div>
+</body>
+</html>

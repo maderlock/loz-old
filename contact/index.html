@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Loz Because - Circus Street Artist, Hula-hoopist, and Mistress of Ceremonies (MC)" >
+<meta name="keywords" content="circus, street artist, hula-hoop, mc, compere" >
+<link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
+<title>Loz Because - Contact Me</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
+<link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="/public/themes/jquery/flowplayer-3.2.6.min.js"></script>
+<link href="/public/themes/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="/public/themes/css/oneColFixCtr.css" rel="stylesheet" type="text/css" />
+<link href="/public/themes/css/screen.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/public/themes/jquery/normalPageScripts.js" ></script>
+<script type="text/javascript">
+	function blurringText(id, initText) {
+		if ( id.value == "" ) {
+			id.value = initText;
+		}
+	}
+	function focusText(id, initText) {
+		if ( id.value == initText ) {
+			id.value = "";
+		}
+	}
+	$(document).ready(function() {
+	  if($('#homeimage')[0].offsetWidth == 296) {
+    	$('span.noimages').each(function() {
+      		$(this).html('');
+   		 });
+  	   }
+	 });
+</script>
+<style>
+th {
+	text-align: left;
+	vertical-align: top;
+	padding-right: 0.75em;	
+}
+.outlineme {
+	border: 1px #666 solid;
+	padding: 2px;
+}
+input, textarea {
+	margin-bottom: 6px;
+}
+#contactlist{
+}
+#contactlist li {
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-left: 60px;
+	padding-top: 12px;
+	margin-bottom: 0px;
+}
+#contactlist #phone {
+	background-image:url(/public/images/icons/phone2.png);
+	height: 48px;
+}
+#contactlist #email {
+	background-image:url(/public/images/icons/email2.png);
+	height: 48px;
+}
+#contactlist #message {
+	background-image:url(/public/images/icons/mail2.png);
+}
+.emailRepeat {
+	border: solid #666 1px;
+	padding: 9px;
+}
+</style><script type="text/javascript">
+  function movecrabtomenu(itemnum) {
+    if (itemnum == 6) {
+       itemnum = 20; // Force off the goddamn screen!
+    }
+    $("#crabWhole").animate().animate({left:(94 * itemnum + 40) + "px"},500);
+  }
+  $(function() {
+    $("#crabWhole").animate({top:"-30px",left:"200px"},500)
+    .animate({left:"+300px"},500);
+  });
+</script>
+</head>
+
+<body class="oneColFixCtr">
+
+<div id="container">
+<div id="container2">
+<div id="crabWhole" style="width:99px; position: relative; top:0px; left: 0px; z-index: 5"><img src="/public/images/crab.png" id="crab1" style="display:hidden; position: relative; left: 0px; top: 0px;" /></div>
+  <a href="/" style="z-index: 70"><img src="/public/themes/css/images/title corner opt.png" width="296" height="386" id="homeimage" /></a>
+  <div id="rotate1">
+  <a href="/">
+    <img src="/public/themes/css/images/rotate2.png" width="240" height="240" class="active" />
+    <img src="/public/themes/css/images/rotate3.jpg" width="240" height="240" />  </a>  </div>
+  <div id="topnav">
+    <ul>
+      <li><a href="/"  onmouseover="movecrabtomenu(1)">Home Page</a></li><li><a href="/shows"  onmouseover="movecrabtomenu(2)">Shows</a><ul><li><a href="/shows/hoop" >Hoop</a></li><li><a href="/shows/street" >Street Show</a></li><li><a href="/shows/compere" >Compère</a></li><li><a href="/shows/fire" >Fire</a></li></ul></li><li><a href="/about"  onmouseover="movecrabtomenu(3)">About</a></li><li><a href="/videos"  onmouseover="movecrabtomenu(4)">Videos</a></li><li><a href="/faqs"  onmouseover="movecrabtomenu(5)">FAQs</a></li><li class="current"><a href="/contact"  onmouseover="movecrabtomenu(6)">Contact Me</a></li>    </ul>
+  </div>
+  <div id="mainContent">
+    <h1 class="img">Contact Me</h1>
+    <form action="https://formspree.io/f/xeaqbnvd" method="POST">
+    <ul id="contactlist">
+    	<li id="phone"><span class="noimages">Phone: </span>
+       	  <img src="/public/images/phoneNumber.gif" alt="Phone: 073453 3452143" width="145" height="17" />        </li>
+        <li id="email"><span class="noimages">Email: </span><img src="/public/images/email.gif" alt="Email loz AT lozbecause.com" width="212" height="21" /></li>
+        <li id="message"><span class="noimages">Message: </span>
+        	<table>
+              <tr>
+                <td><input type="text" name="yourname" width="300" style="width:300px;" class="outlineme" onBlur="blurringText(this,'Your Name');" onFocus="focusText(this,'Your Name');" value="Your Name" /></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="email" width="300" style="width:300px;" class="outlineme" onBlur="blurringText(this,'Your Email Address');" onFocus="focusText(this,'Your Email Address');" value="Your Email Address" /></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="_subject" width="300" style="width:300px;" class="outlineme" onBlur="blurringText(this,'Subject');" onFocus="focusText(this,'Subject');" value="Subject" /></td>
+              </tr>
+              <tr>
+                <td><textarea name="themessage" cols="45" rows="4" wrap="virtual" style="width:300px" class="outlineme" onBlur="blurringText(this,'Message');" onFocus="focusText(this,'Message');">Message</textarea></td>
+              </tr>
+              <tr>
+                <td><input type="submit" value="Send Message" /></td>
+              </tr>
+            </table>
+        </li>
+    </ul>
+    </form>
+    </div>
+</div>
+</div>
+</body>
+</html>

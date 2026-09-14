@@ -1,0 +1,263 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h1, h2, h3, h4 {
+	padding-top: 1em;
+	font-family: "Myriad Pro", Aller, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h1.img {
+	margin-top: 0px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	font-size: 50px;
+	font-weight: 600;
+	background-image: url(images/rings.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	vertical-align: middle;
+	height: 63px;
+	padding-left: 35px;
+	padding-top: 11px;
+	padding-bottom:0px;
+}
+
+#toplink {
+	float:left;
+	width:390px;
+	height: 95px;
+	position: relative;
+	left:0px;
+	display:block;
+}
+
+#toplink a {
+	width:390px;
+	height: 95px;
+	display:block;
+}
+
+#toplink a:hover {
+}
+
+#topnav {
+	line-height: 1;
+	margin-left: 0;
+	margin-bottom: 0;
+	position: absolute;
+	left: 200px;
+	top: 5px;
+	width: 550px;
+	padding:0px;
+	float:left;
+	z-index: 100;
+}
+
+#topnav li{
+	float: left;
+	width: 102px;
+	height: 94px;
+	list-style: none;
+	display: block;
+	margin: 0;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	margin-left: 5px;
+	margin-top: -30px;
+	font-weight: bold;
+	padding-left: 0px;
+	z-index: 200;
+}
+
+#topnav li a{
+	padding-top: 40px;
+	text-decoration: none;
+	color: navy;
+	display: block;
+	height: 54px;
+	vertical-align: middle;
+}
+
+#topnav li a:link, #topnav li a:visited{
+	color: navy;
+}
+
+#topnav li a:hover{
+	color: #000;
+	background-image: url(images/circle%20select.png);
+	z-index:250;
+}
+
+#topnav ul ul {
+	margin-left: 23px;
+	margin-right: 5px;
+	margin-top: -25px;
+	z-index: 150;
+	display: none;
+	width: 100px;
+}
+
+#topnav ul ul li {
+	float: left;
+	width: 102px;
+	height: auto;
+	list-style: none;
+	display: block;
+	margin: 0;
+	text-align: left;
+	vertical-align: middle;
+	white-space: nowrap;
+	margin-left: 0px;
+	margin-top: 0px;
+	font-weight: bold;
+	padding-left: 0px;
+	background-color:rgb(255,255,255);
+	z-index: 150;
+}
+
+#topnav ul ul li a {
+	padding-top: 0px;
+	text-decoration: none;
+	color: navy;
+	display: block;
+	height: auto;
+	vertical-align: middle;
+	background-image: none;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#topnav ul ul li a:hover{
+	background-image: none;
+	color: #FFF;
+	background-color:rgb(30,30,255);
+}
+
+img.right, div.right {
+	position: relative;
+	float:right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+img.left, div.left {
+	position: relative;
+	float:left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+div.caption {
+	z-index: 200;
+	position: relative;
+	max-width: 170px;
+	margin-left: 30px;
+	margin-top: -40px;
+	border: 1px black solid;
+	font-size: 80%;
+	padding: 3px;
+	background: rgb(98%,98%,98%);
+	background: rgba(100%, 100%, 100%, 0.9);
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	behavior: url(/css/PIE.htc);
+}
+* html div.caption {
+	background-color: white;
+}
+
+p {
+	margin-bottom: 0.7em;
+}
+blockquote {
+	font-family: Caslon, Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font-size: 90%;
+	color: #000;
+	background-color: #FFEE88;
+	border: 1px solid #FF9933;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	position: relative;
+	margin-top: 28px;
+	margin-right: 20px;
+	margin-bottom: 6px;
+	margin-left: 20px;
+	padding-top: 9px;
+	padding-right: 15px;
+	padding-bottom: 9px;
+	padding-left: 15px;
+	behavior: url(/css/PIE.htc);
+}
+.quotecaption:before {
+	content:"-- ";
+}
+.quotecaption {
+	font-family: "Adobe Caslon Pro", Caslon, Georgia, "Times New Roman", Times, serif;
+	font-size: 80%;
+	font-style: italic;	
+	margin-left:3em;
+	margin-top:0px;
+}
+.openquotes, .closequotes {
+	height: 28px;
+	width:28px;
+	display:block;
+	position:absolute;
+}
+.openquotes {
+	left:-12px;
+	top:-12px;
+	background-image:url(images/openQcircle.png);
+	background-repeat: no-repeat;
+}
+.closequotes {
+	right:-12px;
+	bottom:-12px;
+	background-image:url(images/closeQcircle.png);
+	background-repeat: no-repeat;
+}
+
+.experience {
+	border: 1px solid #666;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-bottom: 6px;
+	behavior: url(/css/PIE.htc);
+}
+.experiencebody {
+	margin-top: -6px;
+	margin-left: 30px;
+	margin-right: 50px;
+}
+p.experiencehead {
+	margin-top:6px;
+	margin-bottom:6px;
+	margin-left: 6px;
+}
+.experiencehead a {
+	color:#000000;
+	display:block;
+	text-decoration: none;
+}
+.experiencehead a:hover {
+	color:red;
+}
+.fixedWidth1 {
+	display:block;
+	float:left;
+	width:250px;
+}
+
+.tri-open, .tri-closed { padding-left:13px; background-position: left center; background-repeat: no-repeat; }
+.tri-open { background-image: url(images/triangle-open.gif); }
+.tri-closed { background-image: url(images/triangle-closed.gif); }
+.clear {
+	clear: both;
+}
+/* Override jquery styling */#
+.ui-tabs .ui-tabs-panel {
+border-width: 1px;
+}

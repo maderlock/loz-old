@@ -1,0 +1,81 @@
+@charset "UTF-8";
+body {
+	line-height: 1.5;
+	letter-spacing: normal;
+	color: #000;
+	font-weight: normal;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	background: #FFFCDB;
+	background-image: url(images/yellow-back.png);
+}
+.oneColFixCtr #container {
+	width: 780px; /* the auto margins (in conjunction with a width) center the page */
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	background-color: #FFF;
+	background-image: url(images/repeating%20graphics%20white.jpg);
+	background-repeat: repeat-y;
+	background-position: -121px 312px;
+	min-height: 1000px;
+	margin-top: 73px;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+
+.oneColFixCtr #container2 {
+	background-image: url(images/top-right-hand-corner-yellow.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+        z-index: 60;
+}
+
+/* mac hide \*/
+* html #container {
+	height:1000px
+}
+/* end hide */
+
+.oneColFixCtr #mainContent {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	padding-top: 30px;
+	padding-right: 40px;
+	padding-bottom: 0;
+	padding-left: 180px;
+	z-index: 50;
+}
+#homeimage {
+	position: absolute;
+	left: -80px;
+	top: -73px;
+	float: left;
+	z-index: 20;
+}
+#rotate1 {
+	position: absolute;
+	left: -71px;
+	top: -41px;
+	float: left;
+	z-index: 10;
+	width:250px;
+	height:250px;
+}
+#rotate1 img{
+	display:none;
+	position:absolute;
+}
+#rotate1 img.active{
+  display:block;
+}
+
+.leftcolumn {
+	float: left;
+	width:288px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}

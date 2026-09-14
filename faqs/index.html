@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Loz Because - Circus Street Artist, Hula-hoopist, and Mistress of Ceremonies (MC)" >
+<meta name="keywords" content="circus, street artist, hula-hoop, mc, compere" >
+<link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
+<title>Loz Because - FAQs</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
+<link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="/public/themes/jquery/flowplayer-3.2.6.min.js"></script>
+<link href="/public/themes/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="/public/themes/css/oneColFixCtr.css" rel="stylesheet" type="text/css" />
+<link href="/public/themes/css/screen.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/public/themes/jquery/normalPageScripts.js" ></script>
+<script type="text/javascript" src="/public/themes/jquery/snow.js" ></script>
+<style>
+h2 { padding-top: 0; padding-bottom: 1em; }
+</style>
+<script type="text/javascript">
+// Make it snow crabs
+$(function(){
+    $("#crabstorm").click(function(){
+        $(this).attr('disabled','disabled');
+        $(document).snow({
+            SnowImage: "/public/images/crab.png",
+            Quantity: 100
+        });
+        $('#faq').append('<dt>5. Argrrgghhh!! How can I get rid of the crabs?!</dt><dd>What?</dd><dt>6. I said, HOW DO I GET RID OF THE CRABS?</dt><dd>Too late. Burn the computer and move to Guatemala. Use protection next time.</dd>');
+    });
+});
+</script><script type="text/javascript">
+  function movecrabtomenu(itemnum) {
+    if (itemnum == 6) {
+       itemnum = 20; // Force off the goddamn screen!
+    }
+    $("#crabWhole").animate().animate({left:(94 * itemnum + 40) + "px"},500);
+  }
+  $(function() {
+    $("#crabWhole").animate({top:"-30px",left:"200px"},500)
+    .animate({left:"+300px"},500);
+  });
+</script>
+</head>
+
+<body class="oneColFixCtr">
+
+<div id="container">
+<div id="container2">
+<div id="crabWhole" style="width:99px; position: relative; top:0px; left: 0px; z-index: 5"><img src="/public/images/crab.png" id="crab1" style="display:hidden; position: relative; left: 0px; top: 0px;" /></div>
+  <a href="/" style="z-index: 70"><img src="/public/themes/css/images/title corner opt.png" width="296" height="386" id="homeimage" /></a>
+  <div id="rotate1">
+  <a href="/">
+    <img src="/public/themes/css/images/rotate2.png" width="240" height="240" class="active" />
+    <img src="/public/themes/css/images/rotate3.jpg" width="240" height="240" />  </a>  </div>
+  <div id="topnav">
+    <ul>
+      <li><a href="/"  onmouseover="movecrabtomenu(1)">Home Page</a></li><li><a href="/shows"  onmouseover="movecrabtomenu(2)">Shows</a><ul><li><a href="/shows/hoop" >Hoop</a></li><li><a href="/shows/street" >Street Show</a></li><li><a href="/shows/compere" >Compère</a></li><li><a href="/shows/fire" >Fire</a></li></ul></li><li><a href="/about"  onmouseover="movecrabtomenu(3)">About</a></li><li><a href="/videos"  onmouseover="movecrabtomenu(4)">Videos</a></li><li class="current"><a href="/faqs"  onmouseover="movecrabtomenu(5)">FAQs</a></li><li><a href="/contact"  onmouseover="movecrabtomenu(6)">Contact Me</a></li>    </ul>
+  </div>
+  <div id="mainContent">
+    <h1 class="img">FAQs</h1>
+    <div class="standalone">
+<h2>Foolishly Asked Questions</h2>
+<img src="/public/images/140215_lozstupidface.jpg" alt="Loz FAQs" title="Ask a stupid question, get a crab." width="200" height="200" class="circle right" />
+<dl id="faq">
+  <dt>1. Hi Loz</dt>
+    <dd>This is not a question.</dd>
+  <dt>2. How many hoops can you spin?</dt>
+    <dd>An infinite number, just not all at the same time.</dd>
+  <dt>3. What's the deal with the crab thing on your top menu?</dt>
+    <dd>I like crabs. Deal with it.</dd>
+  <dt>4. How can I get more crabs?</dt>
+    <dd><button id="crabstorm">This will give you crabs</button></dd>
+</dl>
+
+    </div>
+</div>
+</div>
+</body>
+</html>

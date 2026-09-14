@@ -1,0 +1,86 @@
+h2 {
+    /*background-color: red;*/
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    behavior: url('/public/themes/css/PIE.htc');
+}
+.standalone {
+    clear:both;
+    min-height: 230px;
+    border: solid #999 1px;
+    padding:9px;
+    margin-bottom:9px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    behavior: url("/public/themes/css/PIE.htc");
+}
+.standalone h2 {
+    padding-top:3px;
+    padding-left:4px;
+    margin-left:-4px;
+    width: 310px;
+    margin-top:0px;
+    margin-bottom: 6px;
+    background-repeat: repeat-x;
+    background-position: top;
+    display:block;
+    font-size: 20pt
+}
+.standalone h3 {
+    padding-top:0px;
+    margin-bottom: 6pt;
+}
+.style1 {
+    font-size: 90%;
+    font-style: italic;
+}
+/* player container */
+div.player {
+    height:330px;
+    width:540px;
+    border:2px solid #fff;
+    outline:1px solid #333;
+    -moz-outline-radius:4px;
+    cursor:pointer;
+    float:left;
+    text-align:center;
+    margin-right:15px;
+}
+
+/* play button */
+div.player img {
+    margin-top:117px;
+}
+
+/* info area */
+div.player div.info {
+    height:40px;
+    background:#000 url("/public/themes/css/img/global/gradient/h80.png") repeat-x;
+    opacity:0.7;
+    color:#fff;
+    text-align:left;
+    padding:5px 15px;   
+    font-family:"bitstream vera sans","trebuchet ms";
+    font-size:12px;
+    border-top:1px solid #ccc;
+    margin-top:75px;
+}
+
+/* duration data inside info area */
+div.player div.info span {
+    color:#99FF99;
+    display:block;
+    font-weight:bold;
+}
+
+.inithidden { display: none }
+
+.ui-tabs .ui-tabs-panel {
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 12px;
+    padding-bottom 12px;
+}
+.ui-tabs .ui-tabs-nav li a {
+   padding: 0.4em 0.7em;
+}

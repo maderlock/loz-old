@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Loz Because - Circus Street Artist, Hula-hoopist, and Mistress of Ceremonies (MC)" >
 <meta name="keywords" content="circus, street artist, hula-hoop, mc, compere" >
 <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
@@ -61,6 +62,14 @@ th {
 .outlineme {
 	border: 1px #666 solid;
 	padding: 2px;
+	width: 300px;
+	box-sizing: border-box;
+}
+@media (max-width: 850px) {
+	.outlineme {
+		width: 100%;
+		max-width: 300px;
+	}
 }
 input, textarea {
 	margin-bottom: 6px;
@@ -147,16 +156,16 @@ input, textarea {
         <li id="message"><span class="noimages">Message: </span>
         	<table>
               <tr>
-                <td><input type="text" name="yourname" width="300" style="width:300px;" class="outlineme" onBlur="blurringText(this,'Your Name');" onFocus="focusText(this,'Your Name');" value="Your Name" /></td>
+                <td><input type="text" name="yourname" class="outlineme" onBlur="blurringText(this,'Your Name');" onFocus="focusText(this,'Your Name');" value="Your Name" /></td>
               </tr>
               <tr>
-                <td><input type="text" name="email" width="300" style="width:300px;" class="outlineme" onBlur="blurringText(this,'Your Email Address');" onFocus="focusText(this,'Your Email Address');" value="Your Email Address" /></td>
+                <td><input type="text" name="email" class="outlineme" onBlur="blurringText(this,'Your Email Address');" onFocus="focusText(this,'Your Email Address');" value="Your Email Address" /></td>
               </tr>
               <tr>
-                <td><input type="text" name="_subject" width="300" style="width:300px;" class="outlineme" onBlur="blurringText(this,'Subject');" onFocus="focusText(this,'Subject');" value="Subject" /></td>
+                <td><input type="text" name="_subject" class="outlineme" onBlur="blurringText(this,'Subject');" onFocus="focusText(this,'Subject');" value="Subject" /></td>
               </tr>
               <tr>
-                <td><textarea name="themessage" cols="45" rows="4" wrap="virtual" style="width:300px" class="outlineme" onBlur="blurringText(this,'Message');" onFocus="focusText(this,'Message');">Message</textarea></td>
+                <td><textarea name="themessage" rows="4" wrap="virtual" class="outlineme" onBlur="blurringText(this,'Message');" onFocus="focusText(this,'Message');">Message</textarea></td>
               </tr>
               <tr>
                 <td><input type="submit" value="Send Message" /></td>

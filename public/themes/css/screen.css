@@ -1,6 +1,32 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/* Fact tables (About page's Experience/Highlights): fixed widths used
+   to live on the table/col/td elements themselves, which meant a table
+   built for an 800px page forced the whole content area to overflow on
+   narrow screens no matter what the container did. Desktop keeps the
+   original pixel widths; mobile switches to percentages instead. */
+table.facts {
+	width: 511px;
+}
+table.facts col:nth-child(1) {
+	width: 85px;
+}
+table.facts col:nth-child(2) {
+	width: 394px;
+}
+@media (max-width: 850px) {
+	table.facts {
+		width: 100%;
+	}
+	table.facts col:nth-child(1) {
+		width: 30%;
+	}
+	table.facts col:nth-child(2) {
+		width: 70%;
+	}
+}
+
 h1, h2, h3, h4 {
 	padding-top: 1em;
 	font-family: "Alegreya Sans SC", sans-serif;
@@ -164,6 +190,12 @@ img.left, div.left {
 	margin-right: 10px;
 	margin-bottom: 10px;
 }
+/* Pulls a floated image up to overlap the heading above it (desktop
+   only) - see the mobile override further down, which zeroes this out
+   so the image sits below the heading instead of overlapping it. */
+.titleOverlap {
+	margin-top: -50px;
+}
 div.caption {
 	z-index: 200;
 	position: relative;
@@ -283,4 +315,176 @@ p.experiencehead {
 /* Override jquery styling */#
 .ui-tabs .ui-tabs-panel {
 border-width: 1px;
+}
+
+/* Responsive video embeds: harmless on desktop (matches the fixed
+   540-560px widths already used), keeps them from overflowing narrow
+   viewports in the 851-990px transitional zone and on mobile. */
+#mainContent iframe {
+	max-width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+}
+
+/* Full desktop above 990px, unchanged. */
+
+/* 990px -> 851px: the container fluidly widens so the gap on the right
+   closes to nothing by 850px, while the left gap (which the decorative
+   corner graphic bleeds into) stays put. Values are solved so the width
+   matches the fixed 780px desktop layout exactly at 990px and reaches
+   zero right-hand gap exactly at 850px. */
+@media (max-width: 990px) and (min-width: 851px) {
+	.oneColFixCtr #container {
+		width: calc(25vw + 532.5px);
+		margin-left: 105px;
+	}
+}
+
+/* 850px and below: actual mobile view */
+@media (max-width: 850px) {
+	.oneColFixCtr #container {
+		width: calc(100% - 20px);
+		margin: 50px 10px 0 10px;
+		background-image: none;
+	}
+	.oneColFixCtr #mainContent {
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 138px;
+	}
+	#crabWhole {
+		display: none;
+	}
+	/* The circle logo is cropped down to its top ~30% (the ring's top
+	   arc), rather than shown in full - object-fit/object-position crop
+	   it without needing a wrapper. */
+	#homeimage {
+		width: 150px;
+		height: 138px;
+		object-fit: cover;
+		object-position: top;
+		left: -8px;
+		top: 0;
+	}
+	/* The cross-fading circles behind the logo are scaled and cropped
+	   to the same top-arc window using the same ratio as #homeimage,
+	   so the two stay aligned as a single graphic. This is a best-effort
+	   geometric estimate carried over from the desktop offsets - it may
+	   need a manual by-eye nudge on the actual device. */
+	#rotate1 {
+		left: -3px;
+		top: 16px;
+		width: 125px;
+		height: 118px;
+		overflow: hidden;
+	}
+	#rotate1 img {
+		width: 125px;
+		height: 125px;
+		top: 0;
+		left: 0;
+	}
+	/* Static "LOZ BECAUSE" wordmark, reusing the homepage graphic's
+	   logo area (cropped via background-position/-size) with its
+	   colours inverted so the white text reads on this white header
+	   instead of the homepage's black background. Sits to the right of
+	   the cropped circle, filling the rest of the header row. */
+	#container2::before {
+		content: "";
+		position: absolute;
+		left: calc(50% - 12px);
+		right: 15px;
+		top: 8px;
+		height: 57px;
+		background-image: url(/public/images/frontpage.png);
+		background-repeat: no-repeat;
+		background-position: -89px 0;
+		background-size: 255px 201px;
+		filter: invert(1);
+	}
+	#topnav {
+		position: static;
+		left: auto;
+		top: auto;
+		width: calc(100% - 120px);
+		margin-top: 75px;
+		margin-left: 120px;
+		padding-bottom: 8px;
+	}
+	#topnav > ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#topnav li {
+		float: none;
+		width: auto;
+		height: auto;
+		margin: 3px 4px;
+	}
+	#topnav li a {
+		height: auto;
+		padding: 6px 10px 4px 10px;
+	}
+	#topnav li a:hover {
+		background-image: none;
+	}
+	#topnav ul ul {
+		position: static;
+		width: auto;
+		margin: 4px 0 0 0;
+	}
+	#topnav ul ul li {
+		float: none;
+		width: auto;
+	}
+
+	h1.img {
+		font-size: 34px;
+		height: auto;
+		clear: both;
+	}
+	h2 {
+		font-size: 120%;
+	}
+
+	/* Circular portrait photos: normalPageScripts.js rewrites img.circle
+	   at runtime into a .imgcont wrapper (with a caption), turning the
+	   photo itself into a fixed-size CSS background behind a circular
+	   mask image - so stretching it to 100% would only blow up the mask
+	   while the photo stayed pinned at its original size. Un-float and
+	   center it at its natural size instead. */
+	#mainContent .imgcont.left, #mainContent .imgcont.right {
+		float: none;
+		width: 200px;
+		margin: 0 auto 1em auto;
+	}
+
+	.titleOverlap {
+		margin-top: -25px;
+	}
+
+	/* Full-width pictures stay full width. Genuine content photos
+	   aligned to one side or the other (the inline float styles used
+	   throughout the show pages) become full width, stacking instead
+	   of wrapping text. */
+	#mainContent img[style*="float: left"],
+	#mainContent img[style*="float: right"],
+	#mainContent div[style*="float: left"],
+	#mainContent div[style*="float: right"] {
+		float: none !important;
+		width: 100% !important;
+		height: auto !important;
+		margin: 0 0 1em 0 !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	/* Quote captions/blockquotes: reclaim the width that was reserved
+	   for a floated image next to them. */
+	#mainContent blockquote {
+		width: auto !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
 }
